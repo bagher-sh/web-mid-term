@@ -41,6 +41,10 @@ p{
     width: 80%;
 }
 
+#error{
+    display:none;
+}
+
 .align-center{
     display: block;
     margin-right: auto;
