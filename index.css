@@ -3,11 +3,18 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: black;
-  }
+}
+
+p{
+    text-align: center;
+}
+
+
 
 #main{
     display: flex;
     justify-content: center;
+    margin-top: 7%;
 }
 
 #container1{
@@ -24,4 +31,18 @@ body {
     display: block;
     margin-right: auto;
     margin-left: 30px;
+}
+
+#inputs{
+    margin-top: 70%;
+}
+
+#submit{
+    width: 80%;
+}
+
+.align-center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
