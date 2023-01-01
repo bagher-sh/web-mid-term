@@ -1,0 +1,27 @@
+body {
+    background-image: url('octocat_darkwood.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+  }
+
+#main{
+    display: flex;
+    justify-content: center;
+}
+
+#container1{
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    display: block;
+    margin-left: auto;
+}
+#container2{
+    width: 200px;
+    height: 400px;
+    background-color: aliceblue;
+    display: block;
+    margin-right: auto;
+    margin-left: 30px;
+}
