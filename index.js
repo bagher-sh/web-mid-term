@@ -8,21 +8,31 @@ const input = document.getElementById('input');
 const submit = document.getElementById('submit');
 
 const information_div = document.getElementsByClassName('information-div');
+const data_div = document.getElementsByClassName('info-div');
 
 async function get_informations() {
     let id = input.value;
     if (window.localStorage.getItem(id) == null) {
         let info = await fetch(`https://api.github.com/users/${id}`).then((response) => response.json())
         if (info.message == "Not Found") {
-            user_image.style.visibility = "hidden";
+            information_div[0].style.display = "none"
             bio.style.display = "none";
+            data_div[0].style.display = "none"
+            data_div[1].style.display = "none"
+            data_div[2].style.display = "none"
+            data_div[3].style.display = "none"
             error.style.display = "flex";
             error.innerHTML = "Not Found!";
         }
         else {
-            user_image.style.visibility = "visible";
-            bio.style.display = "none";
-            error.style.display = "flex";
+            window.localStorage.setItem(id, JSON.stringify(data));
+            information_div[0].style.display = "flex"
+            bio.style.display = "flex";
+            data_div[0].style.display = "flex"
+            data_div[1].style.display = "flex"
+            data_div[2].style.display = "flex"
+            data_div[3].style.display = "flex"
+            error.style.display = "none";
         }
     }
 

@@ -9,16 +9,14 @@ body{
 
 p{
     font-size: 20px;
-    width: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5%;
     background-color: rgb(255, 255, 255, .7);
     text-align: center;
     border-radius: 7px;
+    width: 100%;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
-
 
 #main{
     display: flex;
@@ -27,18 +25,21 @@ p{
 }
 
 #container1{
-    width: 600px;
-    height: 400px;
+    min-width: 600px;
+    min-height: 400px;
+    width: flex;
+    height: flex;
     background-color: rgb(240, 248, 255, .2);
-    margin-left: auto;
+    margin-left: 15%;
     border-radius: 30px;
 }
+
 #container2{
-    width: 200px;
+    min-width: 200px;
     height: 400px;
     background-color: rgb(240, 248, 255, .2);
-    margin-right: auto;
-    margin-left: 30px;
+    margin-right: 15%;
+    margin-left: 40px;
     gap: 30px;
     border-radius: 30px;
     backface-visibility: visible;
@@ -74,17 +75,17 @@ p{
 
 #error{
     display:none;
+    background-color: rgb(240, 248, 255, .0);;
     opacity: 90%;
     margin-left: 10%;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: red;
     margin-top: 50px;
 }
 
 .information-div{
     display: flex;
-    height: 73%;
 }
 
 #informations{
@@ -107,11 +108,28 @@ p{
 #name{
     font-size: 25px;
     font-weight: bold;
+    margin-left: 20px;
+}
 
+#bio{
+    margin-left: 3%;
 }
 
 #blog{
     font-size: 15px;
+}
+
+.info-div{
+    display: flex;
+}
+
+.icon{
+    margin-top: 20px;
+    margin-right: 10px ;
+    margin-left: 5%;
+    width: 90%;
+    height: 30px;
+    width: 30px;
 }
 
 .align-center{
