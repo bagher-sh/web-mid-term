@@ -18,6 +18,16 @@ p{
     padding-bottom: 10px;
 }
 
+a{
+    font-size: 20px;
+    background-color: rgb(255, 255, 255, .7);
+    text-align: center;
+    border-radius: 7px;
+    width: 100%;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+
 #main{
     display: flex;
     justify-content: center;
@@ -102,7 +112,10 @@ p{
 }
 
 #status{
-    display:none;
+    background-color: rgb(240, 248, 255, .0);
+    display: none;
+    color: DeepPink;
+    margin-left: 23px;
 }
 
 #name{
@@ -120,7 +133,7 @@ p{
 }
 
 .info-div{
-    display: flex;
+    display: none;
 }
 
 .icon{
