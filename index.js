@@ -66,7 +66,12 @@ async function get_informations() {
         if (info.blog != "") {
             blog.innerHTML = info.blog;
             blog.style.textDecoration = "underline"
-            blog.href = info.blog;
+            if (info.blog.includes("http")) {
+                blog.href = info.blog;
+            } 
+            else {
+                blog.href = "http://" + info.blog;
+            }
             blog.style.color = "Black"
         }
         else {
