@@ -1,3 +1,6 @@
+/*
+set background picture, color, size and position 
+*/
 body{
     background-image: url('octocat_darkwood.webp');
     background-repeat: no-repeat;
@@ -7,6 +10,9 @@ body{
     background-color: black;
 }
 
+/*
+set p tag attributes for information box 
+*/
 p{
     font-size: 20px;
     background-color: rgb(255, 255, 255, .7);
@@ -18,22 +24,18 @@ p{
     padding-bottom: 10px;
 }
 
-a{
-    font-size: 20px;
-    background-color: rgb(255, 255, 255, .7);
-    text-align: center;
-    border-radius: 7px;
-    width: 100%;
-    margin-right: 20px;
-    padding-top: 10px;
-}
-
+/*
+set default display position for main div
+*/
 #main{
     display: flex;
     justify-content: center;
     margin-top: 7%;
 }
 
+/*
+set size and backgound color for information box
+*/
 #container1{
     min-width: 600px;
     min-height: 400px;
@@ -44,6 +46,9 @@ a{
     border-radius: 30px;
 }
 
+/*
+set size and backgound color for input box
+*/
 #container2{
     min-width: 200px;
     height: 400px;
@@ -55,10 +60,16 @@ a{
     backface-visibility: visible;
 }
 
+/*
+fix input elements in the center
+*/
 #inputs{
     margin-top: 70%;
 }
 
+/*
+set size and position for username input
+*/
 #input{
     font-size: 15px;
     width: 80%;
@@ -68,6 +79,9 @@ a{
     border-radius: 5px;
 }
 
+/*
+set size and position for submit button
+*/
 #submit{
     background-color: rgb(251, 199, 241);
     width: 80%;
@@ -79,10 +93,16 @@ a{
     border-radius: 5px;
 }
 
+/*
+set hover for submit button
+*/
 #submit:hover{
     background-color: rgb(251, 143, 229);
 }
 
+/*
+set appearance attributes for not found error
+*/
 #error{
     display:none;
     background-color: rgb(240, 248, 255, .0);
@@ -94,14 +114,23 @@ a{
     margin-top: 50px;
 }
 
+/*
+set default display for information div
+*/
 .information-div{
     display: flex;
 }
 
-#informations{
+/*
+set width size for information
+*/
+#information{
     width: 100%;
 }
 
+/*
+set position and size for user image 
+*/
 #user-image{
     width: 230px;
     height: 230px;
@@ -111,6 +140,9 @@ a{
     border-radius: 10px;
 }
 
+/*
+set appearance attributes for most used programing language
+*/
 #programing-language{
     background-color: rgb(240, 248, 255, .0);
     color: DeepPink;
@@ -122,6 +154,9 @@ a{
     margin-bottom: 0px;
 }
 
+/*
+set default display and postion for status message 
+*/
 #status{
     background-color: rgb(240, 248, 255, .0);
     display: none;
@@ -129,24 +164,45 @@ a{
     margin-left: 23px;
 }
 
+/*
+set font size for name
+*/
 #name{
     font-size: 25px;
     font-weight: bold;
     margin-left: 20px;
 }
 
+/*
+set position for bio
+*/
 #bio{
     margin-left: 3%;
 }
 
+/*
+set appearance attributes for blog link
+*/
 #blog{
     font-size: 15px;
+    background-color: rgb(255, 255, 255, .7);
+    text-align: center;
+    border-radius: 7px;
+    width: 100%;
+    margin-right: 20px;
+    padding-top: 10px;
 }
 
+/*
+set default display fot information div class
+*/
 .info-div{
     display: none;
 }
 
+/*
+set appearance attributes for icon class
+*/
 .icon{
     margin-top: 20px;
     margin-right: 10px ;
@@ -156,6 +212,9 @@ a{
     width: 30px;
 }
 
+/*
+set appearance attributes for align-center class
+*/
 .align-center{
     display: block;
     margin-right: auto;
