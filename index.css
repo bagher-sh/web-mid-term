@@ -85,7 +85,7 @@ a{
 
 #error{
     display:none;
-    background-color: rgb(240, 248, 255, .0);;
+    background-color: rgb(240, 248, 255, .0);
     opacity: 90%;
     margin-left: 10%;
     text-align: center;
@@ -109,6 +109,17 @@ a{
     margin-top: 4%;
     margin-left: 4%;
     border-radius: 10px;
+}
+
+#programing-language{
+    background-color: rgb(240, 248, 255, .0);
+    color: DeepPink;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
 }
 
 #status{

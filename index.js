@@ -10,6 +10,7 @@ const bio = document.getElementById('bio');
 const input = document.getElementById('input');
 const submit = document.getElementById('submit');
 const status_message = document.getElementById('status');
+const programing_language = document.getElementById('programing-language');
 
 async function get_informations() {
     let id = input.value;
@@ -49,6 +50,7 @@ async function get_informations() {
         data_div[2].style.display = "flex"
         data_div[3].style.display = "flex"
         
+        programing_language.innerHTML = "";
         if (info.avatar_url != null) {
             user_image.src = info.avatar_url;
         }
@@ -72,7 +74,7 @@ async function get_informations() {
             else {
                 blog.href = "http://" + info.blog;
             }
-            blog.style.color = "Black"
+            blog.style.color = "DarkBlue"
         }
         else {
             blog.innerHTML = "There is no blog!";
@@ -97,8 +99,34 @@ async function get_informations() {
             bio.style.color = "DeepPink"
         }
     }
-
+    most_used_language = await get_programing_language();
+    if (most_used_language != null) {
+        programing_language.innerHTML = most_used_language;
+    }
+    else {
+        programing_language.innerHTML = "";
+    }
 }
+
+async function get_programing_language(){
+    var id = input.value;
+    let info = await fetch(`https://api.github.com/users/${id}/repos`).then((res) => res.json())
+    info.sort((a, b) => (a.pushed_at > b.pushed_at) ? -1 : 1);
+    let end_index = Math.min(info.length, 5);
+    let last_repositories = info.slice(0, end_index);
+    let languages = []
+    last_repositories.forEach((element) => {
+        if (element.language != null){
+            languages.push(element.language)
+        }
+    });
+    let most_used_language = languages.sort((a,b) =>
+            languages.filter(v => v===a).length
+            - languages.filter(v => v===b).length
+    ).pop();
+    return most_used_language
+}
+
 
 submit.addEventListener('click', get_informations);
 var elem = document.getElementById("input");
